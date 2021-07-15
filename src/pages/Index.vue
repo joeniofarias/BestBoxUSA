@@ -3,26 +3,23 @@
     <div class="page-header clear-filter" filter-color="orange">
       <parallax
         class="page-header-image"
-        style="background-image:url('img/header.jpg')"
+        style="background-image:url('img/marceloprodutos.png')"
       >
       </parallax>
       <div class="container">
         <div class="content-center brand">
-          <img class="n-logo" src="img/now-logo.png" alt="" />
-          <h1 class="h1-seo">Now UI Kit.</h1>
-          <h3>A beautiful Bootstrap 4 UI kit. Yours free.</h3>
+          <img class="n-logo" src="img/bestbox.png" alt="" />
+          <h1 class="h1-seo">Site Best Box.</h1>
+          <h3> Página exemplo para site BestBox.</h3>
         </div>
         <h6 class="category category-absolute">
-          Designed by
-          <a href="http://invisionapp.com/" target="_blank">
-            <img src="img/invision-white-slim.png" class="invision-logo" /> </a
+          Recompilada por Joenio Farias e André Marques
+          <!-- <a href="https://www.instagram.com/joeniofarias/" target="_blank"> 
+            <img src="img/jfLogo.png" class="invision-logo" /> </a
           >. Coded by
           <a href="https://www.creative-tim.com" target="_blank">
-            <img
-              src="img/creative-tim-white-slim2.png"
-              class="creative-tim-logo"
-            /> </a
-          >.
+            <img src="img/creative-tim-white-slim2.png" class="creative-tim-logo"/> </a
+          >. !-->
         </h6>
       </div>
     </div>
@@ -30,15 +27,19 @@
       <div class="section section-images">
         <div class="container">
           <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-4">              
               <div class="hero-images-container">
-                <img src="img/hero-image-1.png" alt="" />
+                <img src="img/alimefusion.png" alt="" />
               </div>
+            </div>
+            <div class="col-md-4">              
               <div class="hero-images-container-1">
-                <img src="img/hero-image-2.png" alt="" />
+                <img src="img/eva.jpg" alt="" />
               </div>
+            </div>
+            <div class="col-md-4">              
               <div class="hero-images-container-2">
-                <img src="img/hero-image-3.png" alt="" />
+                <img src="img/jfLogo.png" alt="" />
               </div>
             </div>
           </div>
