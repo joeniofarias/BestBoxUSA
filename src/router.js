@@ -6,12 +6,22 @@ import Login from './pages/Login.vue';
 import Profile from './pages/Profile.vue';
 import MainNavbar from './layout/MainNavbar.vue';
 import MainFooter from './layout/MainFooter.vue';
+import firebase from 'firebase';
 
 Vue.use(Router);
 
-export default new Router({
+const router = new Router({
   linkExactActiveClass: 'active',
   routes: [
+    // {
+    //   path: '*',
+    //   redirect: '/login'
+    // },
+    // {
+    //   path: '/',
+    //   redirect: '/login'
+
+    // },
     {
       path: '/',
       name: 'index',
@@ -19,8 +29,11 @@ export default new Router({
       props: {
         header: { colorOnScroll: 400 },
         footer: { backgroundColor: 'black' }
+      },
+      meta: {
+        requiresAuth: true
       }
-    },
+    },     
     {
       path: '/landing',
       name: 'landing',
@@ -56,3 +69,14 @@ export default new Router({
     }
   }
 });
+
+// router.beforeEach((to, from, next) => {
+//   const currentUser = firebase.auth().currentUser;
+//   const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
+
+//   if (requiresAuth && !currentUser) next('login');
+//   else if (!requiresAuth && currentUser) next('index');
+//   else next();
+// });
+
+export default router;
