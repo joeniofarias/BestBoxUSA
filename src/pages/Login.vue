@@ -9,7 +9,7 @@
         <div class="col-md-5 ml-auto mr-auto">
           <card type="login" plain>
             <div slot="header" class="logo-container">
-              <img v-lazy="'img/now-ui-icons design_app'" alt="" />
+              <img v-lazy="'img/BestBox.png'" alt="" />
             </div>
 
             <fg-input
