@@ -8,7 +8,7 @@
   >
     <template>
       <router-link v-popover:popover1 class="navbar-brand" to="/">
-        Desenvolvido por...
+        BEST BOX USA...
       </router-link>
       <el-popover
         ref="popover1"
@@ -18,7 +18,7 @@
         trigger="hover"
       >
         <div class="popover-body">
-          Frontend: Joenio Farias. Backend: André Marques.
+          Suas compras nos EUA
         </div>
       </el-popover>
     </template>
@@ -29,51 +29,75 @@
           href="https://www.instagram.com/joeniofarias/"
           target="_blank"
         >
-          <i class="now-ui-icons arrows-1_cloud-download-93"></i>
-          <p>Download</p>
+          <i class="fab fa-instagram"></i>
+          <p>Joenio Insta</p>
         </a>
       </li>
       <drop-down
         tag="li"
-        title="Components"
+        title="::..Voltar a página Inicial..::"
         icon="now-ui-icons design_app"
         class="nav-item"
       >
         <nav-link to="/">
-          <i class="now-ui-icons business_chart-pie-36"></i> Geral
+          <i class="now-ui-icons business_chart-pie-36"></i> Início
         </nav-link>
-        <a
-          href="https://demos.creative-tim.com/vue-now-ui-kit/documentation"
-          target="_blank"
-          class="dropdown-item"
-        >
-          <i class="now-ui-icons design_bullet-list-67"></i> Documentação
-        </a>
       </drop-down>
+
+       <drop-down
+        tag="li"
+        title="...::SERVIÇOS::..."
+        icon="now-ui-icons design_app"
+        class="nav-item"
+      >
+        <nav-link to="/">
+          <i class="now-ui-icons business_chart-pie-36"></i> COMPRA ASSISTIDA
+        </nav-link>
+
+        <nav-link to="/">
+          <i class="now-ui-icons business_chart-pie-36"></i> Calcule seu envio
+        </nav-link>
+
+        <nav-link to="/">
+          <i class="now-ui-icons business_chart-pie-36"></i> Torne-se um IMPORTADOR
+        </nav-link>
+
+        <nav-link to="/">
+          <i class="now-ui-icons business_chart-pie-36"></i> CRIAR CONTA
+        </nav-link>
+
+         <nav-link to="/">
+          <i class="now-ui-icons business_chart-pie-36"></i> Fale com a BestBoxUSA
+        </nav-link>
+      </drop-down>
+
       <drop-down
               tag="li"
-              title="Examples"
+              title="..::Faça Login::.."
               icon="now-ui-icons design_image"
               class="nav-item"
       >
-        <nav-link to="/landing">
+        <!--
+          <nav-link to="/landing">
           <i class="now-ui-icons education_paper"></i> Landing
-        </nav-link>
+        </nav-link>!
+        -->
         <nav-link to="/login">
           <i class="now-ui-icons users_circle-08"></i> Login
         </nav-link>
-        <nav-link to="/profile">
+        <!--<nav-link to="/profile">
           <i class="now-ui-icons users_single-02"></i> Profile
         </nav-link>
+        !-->
       </drop-down>
       <li class="nav-item">
         <a
-          class="nav-link btn btn-neutral"
-          href="https://www.creative-tim.com/product/vue-now-ui-kit-pro"
+          class="nav-link btn btn-neutral"      
+          href="http://www.mandatudousa.com.br"
           target="_blank"
         >
-          <i class="now-ui-icons arrows-1_share-66"></i>
-          <p>Upgrade to PRO</p>
+          <i class="now-ui-icons users_circle-08"></i>
+          <p>MANDA TUDO USA</p>
         </a>
       </li>
 
