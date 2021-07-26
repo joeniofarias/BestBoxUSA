@@ -8,7 +8,7 @@
   >
     <template>
       <router-link v-popover:popover1 class="navbar-brand" to="/">
-        Now Ui Kit
+        Desenvolvido por...
       </router-link>
       <el-popover
         ref="popover1"
@@ -18,7 +18,7 @@
         trigger="hover"
       >
         <div class="popover-body">
-          Designed by Invision. Coded by Creative Tim
+          Frontend: Joenio Farias. Backend: André Marques.
         </div>
       </el-popover>
     </template>
@@ -26,7 +26,7 @@
       <li class="nav-item">
         <a
           class="nav-link"
-          href="https://www.creative-tim.com/product/vue-now-ui-kit"
+          href="https://www.instagram.com/joeniofarias/"
           target="_blank"
         >
           <i class="now-ui-icons arrows-1_cloud-download-93"></i>
@@ -40,14 +40,14 @@
         class="nav-item"
       >
         <nav-link to="/">
-          <i class="now-ui-icons business_chart-pie-36"></i> All components
+          <i class="now-ui-icons business_chart-pie-36"></i> Geral
         </nav-link>
         <a
           href="https://demos.creative-tim.com/vue-now-ui-kit/documentation"
           target="_blank"
           class="dropdown-item"
         >
-          <i class="now-ui-icons design_bullet-list-67"></i> Documentation
+          <i class="now-ui-icons design_bullet-list-67"></i> Documentação
         </a>
       </drop-down>
       <drop-down
@@ -81,9 +81,9 @@
         <a
           class="nav-link"
           rel="tooltip"
-          title="Follow us on Twitter"
+          title="Siga-nos no Twitter"
           data-placement="bottom"
-          href="https://twitter.com/CreativeTim"
+          href="https://twitter.com/joeniofarias"
           target="_blank"
         >
           <i class="fab fa-twitter"></i>
@@ -96,7 +96,7 @@
           rel="tooltip"
           title="Like us on Facebook"
           data-placement="bottom"
-          href="https://www.facebook.com/CreativeTim"
+          href="https://www.facebook.com/joenio.farias"
           target="_blank"
         >
           <i class="fab fa-facebook-square"></i>
