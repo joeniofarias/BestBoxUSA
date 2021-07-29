@@ -8,7 +8,7 @@
   >
     <template>
       <router-link v-popover:popover1 class="navbar-brand" to="/">
-        Now Ui Kit
+        BESTBOX USA
       </router-link>
       <el-popover
         ref="popover1"
@@ -50,7 +50,7 @@
           <i class="now-ui-icons design_bullet-list-67"></i> Documentation
         </a>
       </drop-down>
-      <drop-down
+      <!-- <drop-down
               tag="li"
               title="Examples"
               icon="now-ui-icons design_image"
@@ -65,15 +65,15 @@
         <nav-link to="/profile">
           <i class="now-ui-icons users_single-02"></i> Profile
         </nav-link>
-      </drop-down>
+      </drop-down> -->
       <li class="nav-item">
         <a
           class="nav-link btn btn-neutral"
-          href="https://www.creative-tim.com/product/vue-now-ui-kit-pro"
+          href="#/login"
           target="_blank"
         >
           <i class="now-ui-icons arrows-1_share-66"></i>
-          <p>Upgrade to PRO</p>
+          <p>Efetuar Login</p>
         </a>
       </li>
 
