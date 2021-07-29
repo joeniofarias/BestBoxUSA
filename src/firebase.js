@@ -2,7 +2,7 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 
 // firebase init - add your own config here
-var firebaseConfig = {
+const firebaseConfig = {
     apiKey: "AIzaSyDVIo8kKHwReaHnBAXnAHOmNbVObUQZYSI",
     authDomain: "bestboxusa-sso.firebaseapp.com",
     projectId: "bestboxusa-sso",
