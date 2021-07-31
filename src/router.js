@@ -6,22 +6,17 @@ import Login from './pages/Login.vue';
 import Profile from './pages/Profile.vue';
 import MainNavbar from './layout/MainNavbar.vue';
 import MainFooter from './layout/MainFooter.vue';
-import firebase from 'firebase';
+import { auth } from './firebase';
 
 Vue.use(Router);
 
 const router = new Router({
   linkExactActiveClass: 'active',
   routes: [
-    // {
-    //   path: '*',
-    //   redirect: '/login'
-    // },
-    // {
-    //   path: '/',
-    //   redirect: '/login'
-
-    // },
+    {
+      path: '*',
+      redirect: '/login'
+    },
     {
       path: '/',
       name: 'index',
@@ -33,7 +28,7 @@ const router = new Router({
       meta: {
         requiresAuth: true
       }
-    },     
+    },
     {
       path: '/landing',
       name: 'landing',
@@ -46,7 +41,7 @@ const router = new Router({
     {
       path: '/login',
       name: 'login',
-      components: { default: Login, header: MainNavbar },
+      component: Login,
       props: {
         header: { colorOnScroll: 400 }
       }
@@ -70,13 +65,19 @@ const router = new Router({
   }
 });
 
-// router.beforeEach((to, from, next) => {
-//   const currentUser = firebase.auth().currentUser;
-//   const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
 
-//   if (requiresAuth && !currentUser) next('login');
-//   else if (!requiresAuth && currentUser) next('index');
-//   else next();
-// });
+router.beforeEach((to, from, next) => {
+  const requiresAuth = to.matched.some(x => x.meta.requiresAuth)
+  console.log(`requiresAuth : ${requiresAuth}`);
+  const loggedInUser = auth.currentUser;
+
+  if (requiresAuth && !loggedInUser) {
+    console.log(`[UNAUTHORIZED] route: ${to.path}`);
+    next('/login')
+  } else {
+    console.log(`[OK] route: ${to.path}`);
+    next()
+  }
+})
 
 export default router;

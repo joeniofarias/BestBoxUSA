@@ -11,6 +11,7 @@
           <img class="n-logo" src="img/bestbox.png" alt="" />
           <h1 class="h1-seo">Site Best Box.</h1>
           <h3> Página exemplo para site BestBox.</h3>
+          <button @click="logout" class="btn btn-primary btn-round btn-lg btn-block">Logout</button> 
         </div>
         <h6 class="category category-absolute">
           Recompilada por Joenio Farias e André Marques
@@ -89,10 +90,8 @@
   import SignupForm from './components/SignupForm';
   import ExamplesSection from './components/ExamplesSection';
   import DownloadSection from './components/DownloadSection';
-  
-  const firebaseAuth = localStorage.getItem('firebaseAuth') ?? {};
-  const secured = firebaseAuth.length > 0;
-
+  import firebase from 'firebase';
+    
   export default {
     name: 'index',
     bodyClass: 'index-page',
@@ -112,8 +111,13 @@
       DownloadSection
     },
     methods :{
-      
-    }
-  };  
+      logout: function() {
+          firebase.auth().signOut().then(() => {
+            this.$router.replace('/login');
+          }).catch((error) => {
+            alert(error.message);
+          });
+      }}      
+    }  
 </script>
 <style></style>

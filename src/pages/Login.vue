@@ -81,7 +81,7 @@ export default {
       firebase.auth().signInWithEmailAndPassword(this.email, this.password)
       .then((userCredential) => {
               
-        localStorage.setItem('userCredential', userCredential);
+        localStorage.setItem('userCredential', JSON.stringify(userCredential));
         this.$router.replace('/');
         alert(`Seja bem vindo!`);
       })
