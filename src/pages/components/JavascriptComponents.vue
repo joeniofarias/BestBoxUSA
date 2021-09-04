@@ -143,9 +143,9 @@
         roasted parts of sentences fly into your mouth.
       </p>
       <template slot="footer">
-        <n-button>Nice Button</n-button>
+        <n-button>Botão bacana</n-button>
         <n-button type="danger" @click.native="modals.classic = false"
-          >Close</n-button
+          >Fechar</n-button
         >
       </template>
     </modal>

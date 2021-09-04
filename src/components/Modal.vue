@@ -76,7 +76,7 @@ export default {
     footerClasses: [Object, String],
     animationDuration: {
       type: Number,
-      default: 500
+      default: 1000
     }
   },
   methods: {

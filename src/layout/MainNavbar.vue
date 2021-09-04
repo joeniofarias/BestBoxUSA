@@ -56,10 +56,10 @@
               icon="now-ui-icons design_image"
               class="nav-item"
       >
-        <nav-link to="/login">
+        <nav-link to="#basic-elements">
           <i class="now-ui-icons education_paper"></i> Compra Assistida
         </nav-link>
-        <nav-link to="/login">
+        <nav-link to="#inputs">
           <i class="now-ui-icons users_circle-08"></i> Fale Conosco
         </nav-link>
         <nav-link to="/login">
