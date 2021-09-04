@@ -35,11 +35,11 @@
               </div>
 
               <div class="card-footer text-left">
-                <button @click="login" class="btn btn-primary btn-round btn-lg btn-block"> <i class="fab fa-facebook-square mr-2"/>Entrar com Facebook</button>            
+                <button @click="login" class="btn btn-primary btn-round btn-lg btn-block"> <i class="fab fa-facebook-square mr-2"/>Entrar com Facebook.</button>            
               </div>
 
                <div class="card-footer text-center">
-                <button @click="login" class="btn btn-primary btn-round btn-lg btn-block"> <i class="fab fa-google-plus mr-2"/>Entrar com Google</button>                
+                <button @click="login" class="btn btn-primary btn-round btn-lg btn-block"> <i class="fab fa-google-plus mr-2"/>Entrar com Google.</button>                
               </div>
 
               <!-- <div class="pull-left">
