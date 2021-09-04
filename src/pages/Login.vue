@@ -9,7 +9,7 @@
         <div class="col-md-5 ml-auto mr-auto">
           <card type="login" plain>
             <div slot="header" class="logo-container">
-              <img v-lazy="'img/BestBox.png'" alt="" />
+              <img v-lazy="'img/now-logo.png'" alt="" />
             </div>
 
             <fg-input
@@ -34,14 +34,18 @@
                 <button @click="login" class="btn btn-primary btn-round btn-lg btn-block"> <i class="fab fa-facebook-square mr-2"/>Entrar.</button>
               </div>
 
+
               <div class="card-footer text-left">
                 <button @click="login" class="btn btn-primary btn-round btn-lg btn-block"> <i class="fab fa-facebook-square mr-2"/>Entrar com Facebook.</button>            
-              </div>
 
+ 
+              </div>
                <div class="card-footer text-center">
-                <button @click="login" class="btn btn-primary btn-round btn-lg btn-block"> <i class="fab fa-google-plus mr-2"/>Entrar com Google.</button>                
-              </div>
 
+                <button @click="login" class="btn btn-primary btn-round btn-lg btn-block"> <i class="fab fa-google-plus mr-2"/>Entrar com Google.</button>                
+
+ 
+              </div>
               <!-- <div class="pull-left">
                 <h6>
                   <a href="#pablo" class="link footer-link">Criar Conta</a>
@@ -83,12 +87,51 @@ export default {
               
         localStorage.setItem('userCredential', JSON.stringify(userCredential));
         this.$router.replace('/');
-        alert(`Seja bem vindo!`);
       })
       .catch((error) => {
         alert(`Login error! {"Error Code": ${error.code} Error Message: "${error.message}"}`);
       });
-        }
+        },
+
+    loginWithGoogle: function(){     
+        const provider = new firebase.auth.GoogleAuthProvider();
+        
+        provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+          
+        firebase.auth()
+        .signInWithPopup(provider)
+        .then((result) => {            
+          
+          localStorage.setItem('userCredential', JSON.stringify(result.credential));                   
+
+          firebase.auth().signInWithRedirect(provider);
+
+          this.$router.replace('/');ssss
+
+        }).catch((error) => {          
+          alert(`Login error! {"Error Code": ${error.code} Error Message: "${error.message}"}`);          
+        });
+      },
+
+      loginWithFacebook: function(){     
+        const provider = new firebase.auth.FacebookAuthProvider();
+        
+        provider.addScope('user_birthday');
+        
+        firebase.auth()
+        .signInWithPopup(provider)
+        .then((result) => {            
+          
+          localStorage.setItem('userCredential', JSON.stringify(result.credential));                   
+
+          firebase.auth().signInWithRedirect(provider);
+
+          this.$router.replace('/');ssss
+
+        }).catch((error) => {          
+          alert(`Login error! {"Error Code": ${error.code} Error Message: "${error.message}"}`);          
+        });
+      }
       }
 };
 </script>
