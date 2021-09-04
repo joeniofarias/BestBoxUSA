@@ -9,7 +9,7 @@
         <div class="col-md-5 ml-auto mr-auto">
           <card type="login" plain>
             <div slot="header" class="logo-container">
-              <img v-lazy="'img/now-logo.png'" alt="" />
+              <img v-lazy="'img/bestbox.png'" alt="" />
             </div>
 
             <fg-input
@@ -31,7 +31,7 @@
 
             <template slot="raw-content">
               <div class="card-footer text-center">
-                <button @click="login" class="btn btn-primary btn-round btn-lg btn-block"> <i class="fab fa-facebook-square mr-2"/>Entrar.</button>
+                <button @click="login" class="btn btn-primary btn-round btn-lg btn-block"> <i class="now-ui-icons arrows-1_share-66 mr-2"/>Entrar.</button>
               </div>
 
 
