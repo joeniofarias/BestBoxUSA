@@ -18,7 +18,7 @@
         trigger="hover"
       >
         <div class="popover-body">
-          Designed by Invision. Coded by Creative Tim
+          Um site da MANDA TUDO USA
         </div>
       </el-popover>
     </template>
@@ -50,29 +50,32 @@
           <i class="now-ui-icons design_bullet-list-67"></i> Documentation
         </a>
       </drop-down>
-      <!-- <drop-down
+      <drop-down
               tag="li"
-              title="Examples"
+              title="Serviços"
               icon="now-ui-icons design_image"
               class="nav-item"
       >
-        <nav-link to="/landing">
-          <i class="now-ui-icons education_paper"></i> Landing
+        <nav-link to="/login">
+          <i class="now-ui-icons education_paper"></i> Compra Assistida
         </nav-link>
         <nav-link to="/login">
-          <i class="now-ui-icons users_circle-08"></i> Login
+          <i class="now-ui-icons users_circle-08"></i> Fale Conosco
         </nav-link>
-        <nav-link to="/profile">
-          <i class="now-ui-icons users_single-02"></i> Profile
+        <nav-link to="/login">
+          <i class="now-ui-icons users_single-02"></i> Seja Importador
         </nav-link>
-      </drop-down> -->
+        <nav-link to="/login">
+          <i class="now-ui-icons users_single-02"></i> Treinamento Online
+        </nav-link>
+      </drop-down>
       <li class="nav-item">
         <a
           class="nav-link btn btn-neutral"
           href="#/login"
           target="_blank"
         >
-          <i class="now-ui-icons arrows-1_share-66"></i>
+          <i class="now-ui-icons arrows-1_share-66 mr-2"></i>
           <p>Efetuar Login</p>
         </a>
       </li>
@@ -81,9 +84,9 @@
         <a
           class="nav-link"
           rel="tooltip"
-          title="Follow us on Twitter"
+          title="Siga a MANDA TUDO USA no Twitter"
           data-placement="bottom"
-          href="https://twitter.com/CreativeTim"
+          href="https://twitter.com/mandatudousa"
           target="_blank"
         >
           <i class="fab fa-twitter"></i>
@@ -94,9 +97,9 @@
         <a
           class="nav-link"
           rel="tooltip"
-          title="Like us on Facebook"
+          title="Dê um Like no Facebook da MANDA TUDO USA"
           data-placement="bottom"
-          href="https://www.facebook.com/CreativeTim"
+          href="https://www.facebook.com/mandatudousa"
           target="_blank"
         >
           <i class="fab fa-facebook-square"></i>
@@ -107,9 +110,9 @@
         <a
           class="nav-link"
           rel="tooltip"
-          title="Follow us on Instagram"
+          title="Siga a MANDA TUDO USA no Instagram"
           data-placement="bottom"
-          href="https://www.instagram.com/CreativeTimOfficial"
+          href="https://www.instagram.com/mandatudousa"
           target="_blank"
         >
           <i class="fab fa-instagram"></i>

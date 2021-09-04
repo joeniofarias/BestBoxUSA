@@ -9,8 +9,9 @@
       <div class="container">
         <div class="content-center brand">
           <img class="n-logo" src="img/bestbox.png" alt="" />
-          <h1 class="h1-seo">Site Best Box.</h1>
-          <h3> Página exemplo para site BestBox.</h3>
+          <h1 class="h1-seo">Agora a manda tudo usa é...</h1>
+          <h1>Best Box USA</h1>
+          <h3> Modernizamos nossa página para te dar mais conforto e melhor experiência de navegação</h3>
           <button @click="logout" class="btn btn-primary btn-round btn-lg btn-block">Logout</button> 
         </div>
         <h6 class="category category-absolute">
