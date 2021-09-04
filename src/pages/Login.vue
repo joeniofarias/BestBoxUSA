@@ -31,7 +31,7 @@
 
             <template slot="raw-content">
               <div class="card-footer text-center">
-                <button @click="login" class="btn btn-primary btn-round btn-lg btn-block"> <i class="fab fa-facebook-square mr-2"/>Entrar</button>
+                <button @click="login" class="btn btn-primary btn-round btn-lg btn-block"> <i class="fab fa-facebook-square mr-2"/>Entrar.</button>
               </div>
 
               <div class="card-footer text-left">
