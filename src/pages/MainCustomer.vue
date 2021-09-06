@@ -3,15 +3,15 @@
     <div class="page-header clear-filter" filter-color="orange">
       <parallax
         class="page-header-image"
-        style="background-image:url('img/marceloprodutos.png')"
+        style="background-image:url('img/acesso.jpg')"
       >
       </parallax>
       <div class="container">
         <div class="content-center brand">
           <img class="n-logo" src="img/bestbox.png" alt="" />
-          <h1 class="h1-seo">Agora a manda tudo usa é...</h1>
-          <h1>Best Box USA</h1>
-          <h3> Modernizamos nossa página para te dar mais conforto e melhor experiência de navegação</h3>
+          <h1 class="h1-seo">Navegue no MENU Serviços acima e...</h1>
+          <h1>IMPORTE DOS EUA</h1>
+          <h3> Temos serviços na sua necessidade e desejo</h3>
           <button @click="logout" class="btn btn-primary btn-round btn-lg btn-block">Logout</button> 
         </div>
         <h6 class="category category-absolute">

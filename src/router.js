@@ -7,6 +7,7 @@ import Profile from './pages/Profile.vue';
 import MainNavbar from './layout/MainNavbar.vue';
 import MainFooter from './layout/MainFooter.vue';
 import MainCustomer from './pages/MainCustomer.vue';
+import MainNavbarCostum from './layout/MainNavbarCustom.vue';
 import { auth } from './firebase';
 
 
@@ -43,7 +44,7 @@ const router = new Router({
     {
       path: '/maincustomer',
       name: 'maincustomer',
-      components: { default: MainCustomer, Landing, header: MainNavbar, footer: MainFooter },
+      components: { default: MainCustomer, Landing, header: MainNavbarCostum, footer: MainFooter },
       props: {
         header: { colorOnScroll: 400 },
         footer: { backgroundColor: 'black' }
