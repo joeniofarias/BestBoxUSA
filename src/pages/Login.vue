@@ -86,7 +86,7 @@ export default {
       .then((userCredential) => {
               
         localStorage.setItem('userCredential', JSON.stringify(userCredential));
-        this.$router.replace('/');
+        this.$router.replace('/MainCustomer');
       })
       .catch((error) => {
         alert(`Login error! {"Error Code": ${error.code} Error Message: "${error.message}"}`);
@@ -106,7 +106,7 @@ export default {
 
           firebase.auth().signInWithRedirect(provider);
 
-          this.$router.replace('/');ssss
+          this.$router.replace('/');
 
         }).catch((error) => {          
           alert(`Login error! {"Error Code": ${error.code} Error Message: "${error.message}"}`);          
