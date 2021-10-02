@@ -8,6 +8,7 @@ import MainNavbar from './layout/MainNavbar.vue';
 import MainFooter from './layout/MainFooter.vue';
 import MainCustomer from './pages/MainCustomer.vue';
 import MainNavbarCostum from './layout/MainNavbarCustom.vue';
+import NewUser from './pages/NewUser.vue';
 import { auth } from './firebase';
 
 
@@ -16,10 +17,10 @@ Vue.use(Router);
 const router = new Router({
   linkExactActiveClass: 'active',
   routes: [
-    {
-      path: '*',
-      redirect: '/login'
-    },
+    // {
+    //   path: '*',
+    //   redirect: '/login'
+    // },
     {
       path: '/',
       name: 'index',
@@ -59,7 +60,16 @@ const router = new Router({
         header: { colorOnScroll: 400 }
       }
     },
-    
+
+
+    {
+      path: '/account/new',
+      name: 'newUser',
+      components: { default: NewUser, header: MainNavbar, footer: MainFooter },
+      props: {
+        header: { colorOnScroll: 400 }
+      }
+    },
 
     {
       path: '/profile',
@@ -81,18 +91,19 @@ const router = new Router({
 });
 
 
-router.beforeEach((to, from, next) => {
-  const requiresAuth = to.matched.some(x => x.meta.requiresAuth)
-  console.log(`requiresAuth : ${requiresAuth}`);
-  const loggedInUser = auth.currentUser;
+//TODO: revisitar e implementar login condicional
+// router.beforeEach((to, from, next) => {
+//   const requiresAuth = to.matched.some(x => x.meta.requiresAuth)
+//   console.log(`requiresAuth : ${requiresAuth}`);
+//   const loggedInUser = auth.currentUser;
 
-  if (requiresAuth && !loggedInUser) {
-    console.log(`[UNAUTHORIZED] route: ${to.path}`);
-    next('/login')
-  } else {
-    console.log(`[OK] route: ${to.path}`);
-    next()
-  }
-})
+//   if (requiresAuth && !loggedInUser) {
+//     console.log(`[UNAUTHORIZED] route: ${to.path}`);
+//     next('/login')
+//   } else {
+//     console.log(`[OK] route: ${to.path}`);
+//     next()
+//   }
+// })
 
 export default router;

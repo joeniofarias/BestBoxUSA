@@ -31,26 +31,22 @@
 
             <template slot="raw-content">
               <div class="card-footer text-center">
-                <button @click="login" class="btn btn-primary btn-round btn-lg btn-block"> <i class="now-ui-icons arrows-1_share-66 mr-2"/>Entrar.</button>
+                <button @click="login" class="btn btn-primary btn-round btn-lg btn-block"> <i class="now-ui-icons arrows-1_share-66 mr-2"/>Com Email e Senha</button>
               </div>
 
+              <!-- <div class="card-footer text-left">
+                <button @click="login" class="btn btn-primary btn-round btn-lg btn-block"> <i class="fab fa-facebook-square mr-2"/>Entrar com Facebook.</button>
+              </div> -->
 
-              <div class="card-footer text-left">
-                <button @click="login" class="btn btn-primary btn-round btn-lg btn-block"> <i class="fab fa-facebook-square mr-2"/>Entrar com Facebook.</button>            
-
- 
-              </div>
                <div class="card-footer text-center">
-
-                <button @click="login" class="btn btn-primary btn-round btn-lg btn-block"> <i class="fab fa-google-plus mr-2"/>Entrar com Google.</button>                
-
- 
+                <button @click="login" class="btn btn-primary btn-round btn-lg btn-block"> <i class="fab fa-google-plus mr-2"/>Entrar com Google</button>                
               </div>
-              <!-- <div class="pull-left">
+
+              <div class="pull-left">
                 <h6>
                   <a href="#pablo" class="link footer-link">Criar Conta</a>
                 </h6>
-              </div> -->
+              </div>
               <div class="pull-right">
                 <h6>
                   <a href="#pablo" class="link footer-link">Precisa de ajuda?</a>
