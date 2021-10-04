@@ -29,14 +29,14 @@
           href="https://www.creative-tim.com/product/vue-now-ui-kit"
           target="_blank"
         >
-          <i class="now-ui-icons arrows-1_cloud-download-93"></i>
+          <i class="now-ui-icons arrows-1_cloud-download-93 mr-2"></i>
           <p>Download</p>
         </a>
       </li>
       <drop-down
         tag="li"
         title="Components"
-        icon="now-ui-icons design_app"
+        icon="now-ui-icons design_app mr-2"
         class="nav-item"
       >
         <nav-link to="/">
@@ -53,7 +53,7 @@
       <drop-down
               tag="li"
               title="Serviços"
-              icon="now-ui-icons design_image"
+              icon="now-ui-icons design_image mr-2"
               class="nav-item"
       >
         <nav-link to="#basic-elements">
