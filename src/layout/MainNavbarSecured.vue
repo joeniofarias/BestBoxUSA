@@ -160,7 +160,7 @@
 import { DropDown, Navbar, NavLink } from '@/components';
 import { Popover } from 'element-ui';
 export default {
-  name: 'main-navbar',
+  name: 'main-navbar-secured',
   props: {
     transparent: Boolean,
     colorOnScroll: Number

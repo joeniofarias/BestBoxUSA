@@ -94,7 +94,7 @@
   import firebase from 'firebase';
     
   export default {
-    name: 'index',
+    name: 'main',
     bodyClass: 'index-page',
     components: {
       Parallax,
