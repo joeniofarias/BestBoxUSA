@@ -16,5 +16,5 @@ export default class User {
     socialSecurity = '';
     photo = '';
     idPhoto = '';
-    language = '';
+    language = 'pt-BR';
 }

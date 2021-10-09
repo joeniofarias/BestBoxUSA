@@ -63,9 +63,9 @@ const router = new Router({
 
 
     {
-      path: '/account/new',
-      name: 'newUser',
-      components: { default: NewUser, header: MainNavbar, footer: MainFooter },
+      path: '/new-user',
+      name: 'new-user',
+      component: NewUser,
       props: {
         header: { colorOnScroll: 400 }
       }
