@@ -31,15 +31,40 @@
 
             <template slot="raw-content">
               <div class="card-footer text-center">
-                <button @click="login" class="btn btn-primary btn-round btn-lg btn-block"> <i class="now-ui-icons arrows-1_share-66 mr-2"/>Com Email e Senha</button>
+                <button
+                  @click="login"
+                  class="btn btn-primary btn-round btn-lg btn-block"
+                >
+                  <i class="now-ui-icons arrows-1_share-66 mr-2" />Com Email e
+                  Senha
+                </button>
               </div>
 
               <!-- <div class="card-footer text-left">
                 <button @click="login" class="btn btn-primary btn-round btn-lg btn-block"> <i class="fab fa-facebook-square mr-2"/>Entrar com Facebook.</button>
               </div> -->
 
-               <div class="card-footer text-center">
-                <button @click="login" class="btn btn-primary btn-round btn-lg btn-block"> <i class="fab fa-google-plus mr-2"/>Entrar com Google</button>                
+              <div class="card-footer text-center">
+                <button
+                  @click="loginWithGoogle"
+                  class="btn btn-primary btn-round btn-lg btn-block"
+                >
+                  <i class="fab fa-google-plus mr-2" />Entrar com Google
+                </button>
+              </div>
+
+              <div class="card-footer text-center">
+                <button
+                  @click="loginWithApple"
+                  class="btn btn-primary btn-round btn-lg btn-block"
+                >
+                  <i class="fab fa-apple mr-2" />Entrar com Apple
+                </button>
+                <!-- <vue-apple-signin
+                  color="black"
+                  :border="true"
+                  type="sign in"
+                ></vue-apple-signin> -->
               </div>
 
               <div class="pull-left">
@@ -49,7 +74,9 @@
               </div>
               <div class="pull-right">
                 <h6>
-                  <a href="#pablo" class="link footer-link">Precisa de ajuda?</a>
+                  <a href="#pablo" class="link footer-link"
+                    >Precisa de ajuda?</a
+                  >
                 </h6>
               </div>
             </template>
@@ -61,74 +88,70 @@
   </div>
 </template>
 <script>
-import firebase from 'firebase';
-import { Card, Button, FormGroupInput } from '@/components';
-import MainFooter from '@/layout/MainFooter';
+import firebase from "firebase";
+import { Card, Button, FormGroupInput } from "@/components";
+import MainFooter from "@/layout/MainFooter";
+
 export default {
-  name: 'login-page',
-  data(){
-    return {email: '', password: ''};
+  name: "login-page",
+  data() {
+    return { email: "", password: "" };
   },
-  bodyClass: 'login-page',
+  bodyClass: "login-page",
   components: {
     Card,
     MainFooter,
     [Button.name]: Button,
-    [FormGroupInput.name]: FormGroupInput
+    [FormGroupInput.name]: FormGroupInput,
   },
   methods: {
-    login: function(){     
-      firebase.auth().signInWithEmailAndPassword(this.email, this.password)
-      .then((userCredential) => {
-              
-        localStorage.setItem('userCredential', JSON.stringify(userCredential));
-        this.$router.replace('/MainCustomer');
-      })
-      .catch((error) => {
-        alert(`Login error! {"Error Code": ${error.code} Error Message: "${error.message}"}`);
-      });
-        },
+    login: function() {
+      firebase
+        .auth()
+        .signInWithEmailAndPassword(this.email, this.password)
+        .then((userCredential) => {
+          localStorage.setItem(
+            "userCredential",
+            JSON.stringify(userCredential)
+          );
+          this.$router.replace("/MainCustomer");
+        })
+        .catch((error) => {
+          alert(
+            `Login error! {"Error Code": ${error.code} Error Message: "${error.message}"}`
+          );
+        });
+    },
 
-    loginWithGoogle: function(){     
-        const provider = new firebase.auth.GoogleAuthProvider();
-        
-        provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
-          
-        firebase.auth()
+    loginWithGoogle: function() {
+      const provider = new firebase.auth.GoogleAuthProvider();
+
+      provider.addScope("https://www.googleapis.com/auth/contacts.readonly");
+
+      firebase
+        .auth()
         .signInWithPopup(provider)
-        .then((result) => {            
-          
-          localStorage.setItem('userCredential', JSON.stringify(result.credential));                   
+        .then((result) => {
+          localStorage.setItem(
+            "userCredential",
+            JSON.stringify(result.credential)
+          );
 
           firebase.auth().signInWithRedirect(provider);
 
-          this.$router.replace('/');
-
-        }).catch((error) => {          
-          alert(`Login error! {"Error Code": ${error.code} Error Message: "${error.message}"}`);          
+          this.$router.replace("/secured");
+        })
+        .catch((error) => {
+          alert(
+            `Login error! {"Error Code": ${error.code} Error Message: "${error.message}"}`
+          );
         });
-      },
+    },
 
-      loginWithFacebook: function(){     
-        const provider = new firebase.auth.FacebookAuthProvider();
-        
-        provider.addScope('user_birthday');
-        
-        firebase.auth()
-        .signInWithPopup(provider)
-        .then((result) => {            
-          
-          localStorage.setItem('userCredential', JSON.stringify(result.credential));                   
-
-          firebase.auth().signInWithRedirect(provider);
-
-          this.$router.replace('/');ssss
-
-        }).catch((error) => {          
-          alert(`Login error! {"Error Code": ${error.code} Error Message: "${error.message}"}`);          
-        });
-      }
-      }
+    loginWithApple: function() {
+      alert("No Apple Developer account credentials found.");
+    },
+  },
 };
 </script>
 <style></style>

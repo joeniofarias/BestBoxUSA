@@ -19,6 +19,14 @@ import App from './App.vue';
 import router from './router';
 import NowUiKit from './plugins/now-ui-kit';
 import { auth } from "./firebase";
+import VueAppleSignin from "vue-apple-signin";
+
+Vue.use(VueAppleSignin, {
+  clientId: "CLIENT_ID",
+  scope: "SCOPE",
+  redirectURI: "REDIRECT_URI",
+  state: "STATE",
+});
 
 Vue.config.productionTip = false;
 Vue.use(NowUiKit);
